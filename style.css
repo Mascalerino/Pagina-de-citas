@@ -1,0 +1,166 @@
+#cuerpo{
+                         background: url(http://bgnovaera.es/img/background.png) no-repeat center center fixed;
+                          -webkit-background-size: cover;
+                          -moz-background-size: cover;
+                          -o-background-size: cover;
+                          background-size: cover;
+                          max-width:1280px;
+                          max-height:600px;
+                          position: absolute;
+                          top:0;
+                          left:0;
+                          right:0;
+                          bottom:0;
+                          margin: auto;
+                         
+                }
+ 
+.cuerpoTexto{
+                        background-color:rgba(4, 36, 80, 0.4);
+                        width:70%;
+                        height:550px;
+                        margin-top:3%;
+                        margin-left:15%;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        border-radius: 5px;
+}
+
+.cuerpoSideBar{
+                        background-color:rgba(4, 36, 80, 0.4);
+                        width:45%;
+                        height:400px;
+                        margin-top:-19%;
+                        margin-left:105%;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        border-radius: 5px;
+}
+
+#index{
+                padding-top: 4%;
+                padding-left: 5%;
+                color:white;
+        }
+
+ 
+ 
+#titulo{font-size:39pt;
+        margin-top:0px;
+      font-family: mtcorsva;}
+
+
+#subtitulo{font-size: 20pt;
+          margin-left:17%;
+        font-family: mtcorsva;}
+ 
+#primerosBotones{    margin-top: 10%;
+                                margin-bottom: 5%;}
+ 
+.botonPortada {
+   width: 212px;
+  -webkit-border-radius: 14;
+  -moz-border-radius: 14;
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: double  #FFFFFF 4px;
+  text-decoration: none;
+  text-align: center;
+}
+.btnIzq{float:left;}
+.btnDer{margin-left: 28%;}
+.otrosBotones{float:left;
+              margin-top: 16%;}
+ 
+.botonPortada:hover {
+  background: #FFFFFF;
+}
+.botonPortada:hover span{
+  color: black;
+ 
+}
+ 
+/* LOGIN */
+#zonaAdmin {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+ 
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+ 
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+@font-face {
+  font-family: mtcorsva;
+  src: url(img/mtcorsva.ttf);
+}
+
+#p1 {
+    font-family: mtcorsva;
+    font-size:  135%;
+}
+
+#somos{
+    font-family: mtcorsva;
+    font-size:  145%;
+}
+
+/*OTRO*/
+
+#foto{
+		margin-top:3%;
+}
+
+
+#formularioBuscar{margin-top:6%;}
+
+.cancion{margin-top:3%;
+		margin-bottom:3%;
+	}
+
+#bienvenido{
+			  margin-top: 7%;
+  			font-size: 14pt;}
+        
+#insertarP{margin-left: 65%;
+          margin-top: 15%;}
+
+#lista{margin-left: 48%;
+      margin-top: 10%;}
+
+#listaP{margin-left: 35%;
+      margin-top: 6%;}
+
+
+
+
+
+
