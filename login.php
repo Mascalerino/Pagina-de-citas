@@ -38,17 +38,17 @@ if (isset($_GET['nouser'])) {
         </nav>
         <div class="panel panel-default">
             <div class="panel-body">
-                <form class="form-signin" method="post" action="controladoras/register.php">
+                <form class="form-signin" method="post" action="register.php" name="login_form">
                     <div class="col-md-12">
                         <p>
                             <label for="email">Email</label>
-                            <input type="text" class="form-control registro" placeholder="Introduce tu email" name="nombreUsuario" required/>
+                            <input type="email" class="form-control registro" placeholder="Introduce tu email" name="email" required/>
                         </p>
                     </div>
                     <div class="col-md-12">
                         <p>
                             <label>Contraseña</label>
-                            <input type="password" placeholder="Introduce tu contraseña" class="form-control registro" name="pass" />
+                            <input type="password" placeholder="Introduce tu contraseña" class="form-control registro" name="password" />
                         </p>
                     </div>
                     <div class="col-md-offset-2 col-md-6">
