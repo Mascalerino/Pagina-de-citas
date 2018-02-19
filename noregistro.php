@@ -57,8 +57,11 @@
                             <div class="form-bottom">
                                 <form role="form" action="" method="post" class="login-form">
                                     <div class="form-group">
-                                        <a href="registro.html" class="btn btn-danger btn-lg btn-block" role="button" aria-disabled="true">Ir al registro</a>
-                                    </div>                                     
+                                        <a href="registro.php" class="btn btn-danger btn-lg btn-block" role="button" aria-disabled="true">Ir al registro</a>
+                                    </div>  
+                                    <div class="form-group">
+                                        <a href="login.php" class="boton btn-danger btn-lg btn-block" role="button" aria-disabled="true">Inicio</a>
+                                    </div>                                   
                                 </form>
                             </div>
                         </div>

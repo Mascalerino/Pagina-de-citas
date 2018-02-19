@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/form-elements.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="js/alertify/themes/alertify.core.css" />
+        <link rel="stylesheet" href="js/alertify/themes/alertify.default.css" />
+        <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,24 +58,24 @@
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <form role="form" action="" method="post" class="login-form">
+                                <form role="form" action="controladoras/procesarUsuario.php?accion=Registrarse" method="POST" class="login-form">
                                     <div class="form-group">
                                         <label class="sr-only" for="form-name">Nombre y apellidos</label>
-                                        <input type="text" name="form-name" placeholder="Nombre y apellidos" class="form-name form-control" id="form-name">
+                                        <input type="text" name="nombre" placeholder="Nombre y apellidos" class="form-name form-control" id="form-name">
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="form-email">Correo Eléctronico</label>
-                                        <input type="text" name="form-email" placeholder="Correo Eléctronico" class="form-email form-control" id="form-email">
+                                        <input type="text" name="email" placeholder="Correo Eléctronico" class="form-email form-control" id="form-email">
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="form-password">Contraseña</label>
-                                        <input type="password" name="form-password" placeholder="Contraseña" class="form-password form-control" id="form-password">
+                                        <input type="password" name="password" placeholder="Contraseña" class="form-password form-control" id="form-password">
                                     </div>
                                     <div class="form-group">
-                                        <a href="login.html" class="btn btn-danger btn-lg btn-block" role="button" aria-disabled="true">Registrarse</a>
+                                        <input type="submit" class="boton btn-danger btn-lg btn-block" value="Registrarse">
                                     </div>
                                     <div class="form-group">
-                                        <a href="login.html" class="btn btn-danger btn-lg btn-block" role="button" aria-disabled="true">Volver a inicio</a>
+                                        <a href="login.php" class="btn btn-danger btn-lg btn-block" role="button" aria-disabled="true">Inicio</a>
                                     </div>                                     
                                 </form>
                             </div>

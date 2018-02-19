@@ -20,7 +20,7 @@ h1, h2 {
 	margin-top: 10px;
 	font-size: 38px;
     font-weight: 100;
-    color: #555;
+    color: #FFF;
     line-height: 50px;
 }
 
@@ -147,6 +147,7 @@ img { max-width: 100%; }
 
 .form-bottom form textarea {
 	height: 100px;
+	resize: none;
 }
 
 .form-bottom form button.btn {
@@ -176,7 +177,9 @@ img { max-width: 100%; }
 	background-color: #fff;
 	border-radius: 15px;
 	overflow: hidden;
+	text-align: left;
 }
+
 
 
 /***** Media queries *****/
