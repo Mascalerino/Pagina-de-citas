@@ -1,21 +1,20 @@
 <?php
 
-include "../modelos/medico.php";
+include "../modelos/usuario.php";
 
 $accion = $_REQUEST['accion'];
 if($accion == "Entrar"){
 	$email = $_REQUEST['email']; 
-	$password = $_REQUEST['password'];
-	$medico = new Medico("","",$email,$password);
-	$medico->loguearUsuario();
+	$password = $_REQUEST['pass'];
+	$usuario = new Usuario("",$email,$password);
+	$usuario->loguearUsuario();
 } else { 
 	if($accion=="Registrarse") { 
 
-		$nombreMedico = $_REQUEST['nombre'];
 		$email = $_REQUEST['email'];
-		$password = $_REQUEST['password']; 
-		$medico = new Medico("",$nombreMedico,$email,$password);
-		$medico->registrarMedico();
+		$password = $_REQUEST['pass']; 
+		$usuario = new Usuario("",$email,$password);
+		$usuario->registrarUsuario();
 
 	} else {
 		/**/

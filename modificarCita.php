@@ -1,6 +1,7 @@
 <?php
 
 include_once "modelos/usuario.php";
+include_once "modelos/citas.php";
 
 
 session_start();
@@ -49,7 +50,10 @@ if(isset($_SESSION['usuario']->email)){
     <body>
         
 
-        <?php include_once "cabecera.php"; ?>  
+        <?php include_once "cabecera.php";
+
+         $idCita=$_GET['idCita'];
+         ?>  
 
         
         <!-- INICIO container-fluid -->
@@ -57,10 +61,12 @@ if(isset($_SESSION['usuario']->email)){
             <!-- INICIO row -->
             <div class="row">
                 <div id="addCita" class="col-sm-8 col-sm-offset-2">              
-                    <h2 class="modal-title">Introduce los Datos de la cita</h2>
-                        <form role="form" action="controladoras/procesarCita.php?accion=add" method="POST" class="login-form">
+                    <h2 class="modal-title">Modificación Datos de la cita</h2>
+                        <form role="form" action="controladoras/procesarCita.php?accion=modificar" method="POST" class="login-form">
+                            <input name="idCita" style="visibility:hidden" value="<?php echo $idCita?>">
                             <div id="fecha" class="modal-body">
                                 <h4 class="modal-title">Fecha de la cita</h4>
+
                                 <select class="dia" name="dia" style="width: auto;">
                                     <option value="">Día</option>
                                     <option value="1">1</option>
@@ -154,7 +160,7 @@ if(isset($_SESSION['usuario']->email)){
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                <input type="submit" class="btn btn-success" data-dismiss="modal" value="Añadir Cita"/>
+                                <input type="submit" class="btn btn-success" data-dismiss="modal" value="Modificar Cita"/>
                             </div>
                         </form>
                     </div>

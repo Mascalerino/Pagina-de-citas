@@ -8,6 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Registro Citas</title>
 
+        <script src="js/alertify/lib/alertify.min.js"> </script>
+        <script src="js/general.js"> </script>
+
+        <link rel="stylesheet" href="js/alertify/themes/alertify.core.css" />
+        <link rel="stylesheet" href="js/alertify/themes/alertify.default.css" />
+        <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" />
+
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -60,16 +67,12 @@
                             <div class="form-bottom">
                                 <form role="form" action="controladoras/procesarUsuario.php?accion=Registrarse" method="POST" class="login-form">
                                     <div class="form-group">
-                                        <label class="sr-only" for="form-name">Nombre y apellidos</label>
-                                        <input type="text" name="nombre" placeholder="Nombre y apellidos" class="form-name form-control" id="form-name">
-                                    </div>
-                                    <div class="form-group">
                                         <label class="sr-only" for="form-email">Correo Eléctronico</label>
                                         <input type="text" name="email" placeholder="Correo Eléctronico" class="form-email form-control" id="form-email">
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="form-password">Contraseña</label>
-                                        <input type="password" name="password" placeholder="Contraseña" class="form-password form-control" id="form-password">
+                                        <input type="password" name="pass" placeholder="Contraseña" class="form-password form-control" id="form-password">
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" class="boton btn-danger btn-lg btn-block" value="Registrarse">

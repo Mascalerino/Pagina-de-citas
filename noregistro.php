@@ -15,6 +15,13 @@
         <link rel="stylesheet" href="css/form-elements.css">
         <link rel="stylesheet" href="css/style.css">
 
+        <script src="js/alertify/lib/alertify.min.js"> </script>
+        <script src="js/general.js"> </script>
+
+        <link rel="stylesheet" href="js/alertify/themes/alertify.core.css" />
+        <link rel="stylesheet" href="js/alertify/themes/alertify.default.css" />
+        <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" />
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>

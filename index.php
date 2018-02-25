@@ -1,11 +1,12 @@
 <?php
 
-include_once "modelos/medico.php";
+include_once "modelos/usuario.php";
 include_once "modelos/citas.php";
+
 
 session_start();
 
-if(isset($_SESSION['medico']->email)){
+if(isset($_SESSION['usuario']->email)){
     
 
 ?>
@@ -17,15 +18,19 @@ if(isset($_SESSION['medico']->email)){
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Consulta de Citas</title>
 
+        <script src="js/alertify/lib/alertify.min.js"> </script>
+        <script src="js/general.js"> </script>
+
+        <link rel="stylesheet" href="js/alertify/themes/alertify.core.css" />
+        <link rel="stylesheet" href="js/alertify/themes/alertify.default.css" />
+        <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" />
+
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/form-elements.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="js/alertify/themes/alertify.core.css" />
-        <link rel="stylesheet" href="js/alertify/themes/alertify.default.css" />
-        <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,28 +50,7 @@ if(isset($_SESSION['medico']->email)){
     <body>
 
         
-        <!-- INICIO Fixed navbar -->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.php">Consulta de Citas</a>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a>Bienvenido <?php echo $_SESSION['medico']->nombre?></a></li>
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Editar Perfil</a></li>
-                        <li><a href="login.php">Cerrar Sesión</a></li>
-                    </ul>
-                </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- FIN Fixed navbar -->
-
-
-        
+         <?php include_once "cabecera.php"; ?>     
         <!-- INICIO container-fluid -->
         <div class="container-fluid">
             
@@ -85,15 +69,15 @@ if(isset($_SESSION['medico']->email)){
                             foreach($arrayCitas as $panelCita){
                             echo '<div id="cita" class="cajaCita">';
                                 echo '<div class="col-sm-9">';
-                                echo "<p><b>Medico: </b>".$panelCita['idMedico']."</p>";
-                                // echo "<p><b>Numero de Cita: </b>".$panelCita['idCita']."</p>";
                                 echo "<p><b>Fecha: </b>".$panelCita['fecha']."</p>";
                                 echo "<p><b>Asunto: </b>".$panelCita['asunto']."</p>";
                                 echo '</div>';
                                 echo '<div class="col-sm-3">';
                                 ?>
-                                    <a href="modficarCita.php" class="btn btn-primary btn-lg btn-block" role="button" aria-disabled="true"><span class="glyphicon glyphicon-edit"></span> Modificar Cita</a>
-                                    <a href="modficarCita.php" class="btn btn-danger btn-lg btn-block" role="button" aria-disabled="true"><span class="glyphicon glyphicon-remove"></span> Eliminar Cita</a>
+                                    <a href="modificarCita.php?idCita=<?php echo $panelCita['idCita']?>" class="btn btn-primary btn-lg btn-block" role="button" aria-disabled="true"><span class="glyphicon glyphicon-edit"></span> Modificar Cita</a>
+                                    <button type="button" class="btn btn-danger btn-lg btn-block" aria-label="Left Align" onclick="eliminarCita('<?php echo $panelCita['idCita']?>');">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Eliminar Cita
+                                    </button>
                                 <?php
                                 echo '</div>';
                             echo '</div>';
